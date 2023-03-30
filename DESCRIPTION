@@ -1,0 +1,13 @@
+Package: MPRAbase
+Title: MPRAbase: an Object Oriented Database for Massively Parallel Reporter Assay Datasets
+Version: 0.0.1.0000
+Authors@R: 
+    person("Andrew", "Blair", , "andrew.blair@ucsf.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-3196-6233"))
+Description: A package interface that provides access to MPRA datasets hosted on Synapse Sage Bionetworks.
+License: use_gpl3_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Suggests: BiocStyle, knitr, mockery, rmarkdown, testthat, webmockr
+VignetteBuilder: knitr
