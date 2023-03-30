@@ -8,6 +8,6 @@ Description: A package interface that provides access to MPRA datasets hosted on
 License: use_gpl3_license()
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Suggests: BiocStyle, knitr, mockery, rmarkdown, testthat, webmockr
 VignetteBuilder: knitr

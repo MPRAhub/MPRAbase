@@ -1,8 +1,8 @@
 # MPRAbase
 # data
 # data/mprabase_v4_6.db
-# data/*_SE.rds
-# data
+data/*_SE.rds
+data
 
 # R packaging
 .Rproj.user

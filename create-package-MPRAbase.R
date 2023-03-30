@@ -2,7 +2,7 @@ library("devtools")
 library("roxygen2")
 
 # NOTE: Developed in the (JupyterLab) container docker.synapse.org/syn51118207/mprabase:v0.1.0 
-setwd("/home/jovyan/work/MPRAbase")
+# setwd("/home/jovyan/work/MPRAbase")
 
 # References
 # https://usethis.r-lib.org/reference/create_package.html
