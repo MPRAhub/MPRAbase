@@ -2,8 +2,9 @@
 # data
 # data/mprabase_v4_6.db
 data/*_SE.rds
-data
-
+data/*
+env/*.sif
+synapse-authToken.tsv
 # R packaging
 .Rproj.user
 .Rhistory
