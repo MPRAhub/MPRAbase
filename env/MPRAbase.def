@@ -22,6 +22,7 @@ From: jupyter/datascience-notebook:latest
     rm -rf /var/lib/apt/lists/*
 
     R -e 'BiocManager::install("scater", dependencies=TRUE)'
+    R -e 'BiocManager::install("iSEE/iSEEhub")'
     pip install pytest
     pip install synapseclient
     conda update conda
