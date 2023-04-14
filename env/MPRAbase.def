@@ -27,3 +27,5 @@ From: jupyter/datascience-notebook:latest
     pip install synapseclient
     conda update conda
     conda install -c conda-forge pandoc
+    conda create -c bioconda -n snakemake snakemake
+    conda install -c bioconda sra-tools
