@@ -23,9 +23,14 @@ From: jupyter/datascience-notebook:latest
 
     R -e 'BiocManager::install("scater", dependencies=TRUE)'
     R -e 'BiocManager::install("iSEE/iSEEhub")'
+    R -e 'BiocManager::install("iSEE/iSEEindex")'
+    R -e 'BiocManager::install("ExperimentHub")'
     pip install pytest
     pip install synapseclient
     conda update conda
     conda install -c conda-forge pandoc
     conda create -c bioconda -n snakemake snakemake
     conda install -c bioconda sra-tools
+    pip install voila
+    jupyter labextension install @voila-dashboards/jupyterlab-preview
+
