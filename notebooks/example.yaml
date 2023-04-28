@@ -15,6 +15,6 @@ initial:
     datasets:
       - BFC1
     title: MPRA Secondary Analysis
-    uri: localhost://analysis-secondary.R
+    uri: localhost://../configs/analysis-secondary.R
     description: |
       Test `SampleAssay` panel for biological replicate correlation analysis.
