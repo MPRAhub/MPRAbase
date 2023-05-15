@@ -5,6 +5,8 @@ data/*_SE.rds
 data/*
 env/*.sif
 synapse-authToken.tsv
+cache/*
+
 # R packaging
 .Rproj.user
 .Rhistory
