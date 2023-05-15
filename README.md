@@ -6,5 +6,5 @@ MPRAbase is an open-source platform that enables access to Massively Parallel Re
 # Installation
 
 ```bash
-$ git clone git@github.com:MPRAhub/MPRAbase.git
+git clone git@github.com:MPRAhub/MPRAbase.git
 ```
