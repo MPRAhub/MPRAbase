@@ -10,5 +10,5 @@ git clone git@github.com:MPRAhub/MPRAbase.git
 
 ```bash
 cd MPRAbase
-bash run-local-MPRAbase.sh
+bash run-local-MPRAbase.sh 8888 8888 3838 3838 /local/dir/path
 ```
