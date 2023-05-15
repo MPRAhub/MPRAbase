@@ -6,7 +6,7 @@ MPRAbase is an open-source platform that enables access to Massively Parallel Re
 
 Before proceeding with the installation, please ensure that you have fulfilled the following accounts and requirements:
 
-- [GitHub]()
+- [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 - (Certified) [Synapse](https://www.synapse.org/)
 - [Docker](https://www.docker.com/)
 - (Optional) [Singularity](https://cloud.sylabs.io/?_gl=1*zlt1gk*_ga*MTU1Mzg2OTQxNy4xNjg0MTkxMzM5*_ga_X710KLJKK6*MTY4NDE5MTMzOS4xLjEuMTY4NDE5MTM0Ni4wLjAuMA..&_ga=2.118074254.606116961.1684191339-1553869417.1684191339)
@@ -19,7 +19,9 @@ For more information, please review our onboarding documentation for a smooth in
 git clone git@github.com:MPRAhub/MPRAbase.git
 cd MPRAbase
 ```
-For local installations, we support a c
+To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container bash script: 
+
 ```bash
 bash run-local-MPRAbase.sh 8888 8888 3838 3838 /local/dir/path
 ```
+
