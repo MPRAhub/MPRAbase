@@ -42,5 +42,3 @@ To run a local instance of iSEE MPRAbase, users can hit the ground running with 
 ```bash
 bash run-local-MPRAbase.sh 8888 8888 3838 3838 /local/dir/path
 ```
-
-Please note, that run-local-MPRAbase.sh has 
