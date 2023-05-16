@@ -12,11 +12,10 @@ We update the centralized instance quarterly, following meta data reporting guid
 
 The MPRAbase repository serves as a decentralized resource center for MPRA data sharing and analysis. Here we provide tutorials for contributing to the centralized iSEE-MPRAbase platform, while retaining your project's data privacy and public release date. The MPRAbase repository is also routinely updated when a dataset passes the community's minimal standardization requirements and is ready to be made public. Therefore, MPRAbase users can launch iSEE-MPRAbase instances and pull new data and applications plugins before the quarterly update.
 
-We encourage all MPRA enthusiasts to install a local MPRAhub/MPRAbase and explore the vast landscape of regulatory elements.
+We invite all MPRA enthusiasts to install a local MPRAhub/MPRAbase and explore the vast landscape of regulatory elements.
 
-
-
-
+Cheers,
+MPRAbase Team
 
 # Prerequistes 
 
