@@ -1,10 +1,19 @@
 # MPRAbase
 
-MPRAbase is an open-source platform that enables access to Massively Parallel Reporter Assay (MPRA) data via an object-oriented database (OODB) supported by Synapse Sage Bionetworks and the National Heart Lung & Blood Institute (NHLBI) BioData Catalyst (BDC).
+Dear MPRA Enthusiast,
+
+Welcome, to MPRAbase, an open-source platform that enables access to Massively Parallel Reporter Assay (MPRA) data via an object-oriented database (OODB). We are a user-driven community supported by Synapse Sage Bionetworks and the National Heart Lung & Blood Institute (NHLBI) BioData Catalyst (BDC).
+
+A centralized instance of iSEE-MPRAbase is hosted by UCSF and the NHBLI BDC here: (**TODO**: Create a link)
+
+We update the centralized instance quarterly, following meta data reporting guidelines that are in compliance with GEO, Bioconductor ExperimentHub, ENCODE, and IGVF. MPRAbase application plugins are managed by their developers, with hot fix support from the MPRAbase community, following a successful pull request and MPRA Summarized Experiment unit test. 
+
+(**TODO**: Add link to (sprint/quarterly update) schedule (google spreadsheet), email reporting mechanism, and application plugin citeria for pull request and unit test)
+
 
 # Prerequistes 
 
-Before proceeding with the installation, please ensure that you have fulfilled the following accounts and requirements:
+Before proceeding with the installation, please ensure that you have fulfilled making the following accounts:
 
 - [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 - (Certified) [Synapse](https://www.synapse.org/)
@@ -15,13 +24,16 @@ For more information, please review our onboarding documentation for a smooth in
 
 # Installation
 
+For users interested 
+
 ```bash
 git clone git@github.com:MPRAhub/MPRAbase.git
 cd MPRAbase
 ```
-To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container bash script: 
+To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you: 
 
 ```bash
 bash run-local-MPRAbase.sh 8888 8888 3838 3838 /local/dir/path
 ```
 
+Please note, that run-local-MPRAbase.sh has 
