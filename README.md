@@ -4,7 +4,7 @@ Dear MPRA Enthusiast,
 
 Welcome, to MPRAbase, an open-source platform that enables access to Massively Parallel Reporter Assay (MPRA) data via an object-oriented database (OODB). We are a user-driven community supported by Synapse Sage Bionetworks and the National Heart Lung & Blood Institute (NHLBI) BioData Catalyst (BDC).
 
-A centralized instance of iSEE-MPRAbase is hosted by UCSF and the NHBLI BDC here: (**TODO**: Create a link)
+A centralized instance of iSEE-MPRAbase is hosted by UCSF, NHGRI, and NHBLI BDC here: (**TODO**: Create a link)
 
 We update the centralized instance quarterly, following meta data reporting guidelines that are in compliance with GEO, Bioconductor ExperimentHub, ENCODE, and IGVF. MPRAbase application plugins are managed by their developers, with hot fix support from the MPRAbase community, following a successful pull request and CI/CD unit testing. 
 
