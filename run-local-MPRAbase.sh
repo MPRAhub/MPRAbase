@@ -18,7 +18,7 @@ usage() {
   echo "  --iSEE-MPRAbase-container-port   Container port for iSEE-MPRAbase (required)"
   echo "  --iSEE-MPRAbase-host-port   Host port for iSEE MPRAbase (required)"
   echo "  --local-dir-mount  Mount local directory as a shared volume to a directory inside the container (e.g., home/jovyan/work) (required)"
-  echo "  --image  Docker image name for running a container (default to current version)"
+  echo "  --image  Docker image name for running a container. Defaults to current version. (default: the main branch's version of the amd64 iSEE MPRAbase container)"
   echo "  --verbose  Enable verbose mode (optional)"
 }
 
