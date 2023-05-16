@@ -40,5 +40,5 @@ cd MPRAbase
 To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you: 
 
 ```bash
-bash run-local-MPRAbase.sh 8888 8888 3838 3838 /local/dir/path
+bash run-local-MPRAbase.sh --container-port 8888 --host-port 8888 --rshiny-container-port 3838 --rshiny-host-port 3838 --local-dir-mount /local/dir/path
 ```
