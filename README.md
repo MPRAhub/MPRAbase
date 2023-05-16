@@ -42,7 +42,7 @@ To run a local instance of iSEE MPRAbase, users can hit the ground running with 
 
 ```bash
 ./run-local-MPRAbase.sh --container-port 8888 --host-port 8888 \
---rshiny-container-port 3838 --rshiny-host-port 3838 \
+--iSEE-MPRAbase-container-port  3838 --iSEE-MPRAbase-host-port 3838 \
 --local-dir-mount /local/dir/path
 ```
 
