@@ -31,7 +31,7 @@ For more information, please review our onboarding documentation for a smooth in
 
 # Installation
 
-For users interested 
+Once you've completed the prerequiste accounts, please clone MPRAbase in a location that permits you to download. (**TODO**: Add estimated file cache size)
 
 ```bash
 git clone git@github.com:MPRAhub/MPRAbase.git
