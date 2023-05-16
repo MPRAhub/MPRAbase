@@ -4,7 +4,7 @@ Dear MPRA Enthusiast,
 
 Welcome, to MPRAbase, an open-source platform that enables access to Massively Parallel Reporter Assay (MPRA) data via an object-oriented database (OODB). We are a user-driven community supported by Synapse Sage Bionetworks and the National Heart Lung & Blood Institute (NHLBI) BioData Catalyst (BDC).
 
-A centralized instance of iSEE-MPRAbase is hosted by UCSF, NHGRI, and NHBLI BDC here: (**TODO**: Create a link)
+A centralized instance of iSEE-MPRAbase is hosted by UCSF, NHGRI, and the NHBLI BDC here: (**TODO**: Create a link)
 
 We update the centralized instance quarterly, following meta data reporting guidelines that are in compliance with GEO, Bioconductor ExperimentHub, ENCODE, and IGVF. MPRAbase application plugins are managed by their developers, with hot fix support from the MPRAbase community, following a successful pull request and CI/CD unit testing. 
 
@@ -37,8 +37,18 @@ Once you've completed the prerequiste accounts, please clone MPRAbase in a locat
 git clone git@github.com:MPRAhub/MPRAbase.git
 cd MPRAbase
 ```
-To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you: 
+
+To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you, with an example command below.
 
 ```bash
-bash run-local-MPRAbase.sh --container-port 8888 --host-port 8888 --rshiny-container-port 3838 --rshiny-host-port 3838 --local-dir-mount /local/dir/path
+./run-local-MPRAbase.sh --container-port 8888 --host-port 8888 \
+--rshiny-container-port 3838 --rshiny-host-port 3838 \
+--local-dir-mount /local/dir/path
 ```
+
+For users on a High Performance Compute (HPC) cluster, we also provide a Singularity definition file and bash scripts for building the Singularity Image Format (SIF) file.
+
+```bash
+./run-hpc-MPRAbase.sh --local-dir-mount /local/dir/path --container-port 9595
+```
+
