@@ -53,7 +53,7 @@ To run a local instance of iSEE MPRAbase, users can hit the ground running with 
 For users on a High Performance Compute (HPC) cluster, we also provide a Singularity definition file and bash scripts for building the Singularity Image Format (SIF) file and launching the container.
 
 ```bash
-env/./build-singulary-sif.sh
+env/./build-singularity-sif.sh
 ./run-hpc-MPRAbase.sh  --container-port 9595 --local-dir-mount /local/dir/path
 ```
 
