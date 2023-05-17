@@ -39,25 +39,37 @@ Once you've completed the prerequiste accounts, please clone MPRAbase in a locat
 
 ```bash
 git clone git@github.com:MPRAhub/MPRAbase.git
-cd MPRAbase
 ```
 
-To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you, with an example command below.
+### Local
+
+To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you called **run-local-MPRAbase.sh**, with an example command below.
 
 ```bash
+cd MPRAbase
 ./run-local-MPRAbase.sh --container-port 8888 --host-port 8888 \
 --iSEE-MPRAbase-container-port  3838 --iSEE-MPRAbase-host-port 3838 \
 --local-dir-mount /local/dir/path
 ```
 
-For users on a High Performance Compute (HPC) cluster, we also provide a Singularity definition file and bash scripts for building the Singularity Image Format (SIF) file and launching the container.
+### High Performance Compute (HPC) cluster
+
+For users on a High Performance Compute (HPC) cluster, we also provide a Singularity definition file and bash script called **build-singularity-sif.sh**, which builds the Singularity Image Format (SIF) file for the iSEE-MPRAbase Singularity container.
 
 ```bash
-env/./build-singularity-sif.sh
+cd MPRAbase/env/
+./build-singularity-sif.sh
+```
+
+After building the iSEE MPRAbase SIF file, navigate to the MPRAbase working directory and launch an instance with **run-hpc-MPRAbase.sh**.
+
+```bash
+cd ../
 ./run-hpc-MPRAbase.sh  --container-port 9595 --local-dir-mount /local/dir/path
 ```
 
+### Conda
 **TODO**: Create conda environment for iSEE-MPRAbase
 
-# Launch iSEE MPRAbase
+# Launch an iSEE MPRAbase Instance
 
