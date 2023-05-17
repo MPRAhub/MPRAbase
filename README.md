@@ -73,3 +73,8 @@ cd ../
 
 # Launch an iSEE MPRAbase Instance
 
+**TODO**: Vignette Tutorial
+
+# Developer Mode
+
+Please see the **MPRAlibrary-Suite** repository for building a stable developer mode environment.
