@@ -47,9 +47,9 @@ To run a local instance of iSEE MPRAbase, users can hit the ground running with 
 
 ```bash
 cd MPRAbase
- python3 run-local-MPRAbase.py --container_port 8888 --host_port 8888 \
- --iSEE_MPRAbase_container_port 3838 --iSEE_MPRAbase_host_port 3838 \
- --local_dir_mount /local/dir/path --image docker.synapse.org/syn51118207/mprabase:arm64-v0.1.1
+python3 run-local-MPRAbase.py --container_port 8888 --host_port 8888 \
+--iSEE_MPRAbase_container_port 3838 --iSEE_MPRAbase_host_port 3838 \
+--local_dir_mount /local/dir/path --image docker.synapse.org/syn51118207/mprabase:arm64-v0.1.1
 ```
 
 ### High Performance Compute (HPC) cluster
