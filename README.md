@@ -43,13 +43,13 @@ git clone git@github.com:MPRAhub/MPRAbase.git
 
 ### Local
 
-To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you called **run-local-MPRAbase.sh**, with an example command below.
+To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you called **run-local-MPRAbase.py**, with an example command below.
 
 ```bash
 cd MPRAbase
-./run-local-MPRAbase.sh --container-port 8888 --host-port 8888 \
---iSEE-MPRAbase-container-port  3838 --iSEE-MPRAbase-host-port 3838 \
---local-dir-mount /local/dir/path
+ python3 run-local-MPRAbase.py --container_port 8888 --host_port 8888 \
+ --iSEE_MPRAbase_container_port 3838 --iSEE_MPRAbase_host_port 3838 \
+ --local_dir_mount /local/dir/path --image docker.synapse.org/syn51118207/mprabase:arm64-v0.1.1
 ```
 
 ### High Performance Compute (HPC) cluster
