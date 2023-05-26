@@ -25,7 +25,7 @@ git clone git@github.com:MPRAhub/MPRAbase.git
 
 ### Local
 
-To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a bash script for you called **run-local-MPRAbase.py**, with an example command below.
+To run a local instance of iSEE MPRAbase, users can hit the ground running with the MPRAbase Docker container. We even have a Python script for you called **run-local-MPRAbase.py**, with an example command below.
 
 ```bash
 cd MPRAbase
