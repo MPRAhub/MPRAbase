@@ -6,10 +6,10 @@
 
 Before proceeding with the installation, please ensure that you have fulfilled making the following accounts:
 
-- [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-- (Certified) [Synapse](https://www.synapse.org/)
-- [Docker](https://www.docker.com/)
-- (Optional) [Singularity](https://cloud.sylabs.io/?_gl=1*zlt1gk*_ga*MTU1Mzg2OTQxNy4xNjg0MTkxMzM5*_ga_X710KLJKK6*MTY4NDE5MTMzOS4xLjEuMTY4NDE5MTM0Ni4wLjAuMA..&_ga=2.118074254.606116961.1684191339-1553869417.1684191339)
+-[] [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home): users will be required to create & add their public ssh key.
+-[] [Synapse](https://www.synapse.org/): users are required to complete certification and email <> to request addition to the project.
+-[] [Docker](https://www.docker.com/): users are (optionally) required to have a Docker account, which will enable them to pull the MPRAbase Docker image from the Synapse registry.
+-[] [Singularity](https://cloud.sylabs.io/?_gl=1*zlt1gk*_ga*MTU1Mzg2OTQxNy4xNjg0MTkxMzM5*_ga_X710KLJKK6*MTY4NDE5MTMzOS4xLjEuMTY4NDE5MTM0Ni4wLjAuMA..&_ga=2.118074254.606116961.1684191339-1553869417.1684191339): users are optionally required to have a Synapse account if they are operating on a high performance compute cluster without root access.
 
 For more information, please review our onboarding documentation for a smooth installation ([link here](https://docs.google.com/document/d/1d23PDeozSP36U-4aWNFhE1knIbZ2HUiWTan9AsKQ-KY/edit?usp=sharing)).
 
@@ -20,7 +20,10 @@ Once you've completed the prerequiste accounts, please clone MPRAbase in a locat
 **TODO**: Add estimated file cache size
 
 ```bash
-git clone git@github.com:MPRAhub/MPRAbase.git
+git clone git@github.com:MPRAhub/MPRAorg-LibrarySuite.git
+cd MPRAorg-LibrarySuite
+bash build-MPRAhub.sh
+cd MPRAhub/MPRAbase
 ```
 
 ### Local
@@ -52,4 +55,16 @@ python3 run-hpc-MPRAbase.sh  --container-port 9595 --local-dir-mount /local/dir/
 
 # Launch an iSEE MPRAbase Instance
 
+(**WorkAround**) In a running MPRAbase JupyterLab container, open a terminal and follow these commands:
+
+```bash
+$ cd /home/jovyan/work
+$ Rscript build-iSEEindex-fork.R
+```
+
 **TODO**: Vignette Tutorial
+
+
+```bash
+
+
