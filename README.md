@@ -10,7 +10,7 @@ Before proceeding with the installation, please ensure that you have fulfilled m
 
 * [Synapse](https://www.synapse.org/): required to complete certification and email <> to request addition to the project.
 
-* [Docker](https://www.docker.com/): (optionally) required to have a Docker account, which will enable them to pull the MPRAbase Docker image from the Synapse registry.
+* [Docker](https://www.docker.com/): (optionally) required to have a Docker account, which will enable you to pull the MPRAbase Docker image from the Synapse registry.
 
 * [Singularity](https://cloud.sylabs.io/?_gl=1*zlt1gk*_ga*MTU1Mzg2OTQxNy4xNjg0MTkxMzM5*_ga_X710KLJKK6*MTY4NDE5MTMzOS4xLjEuMTY4NDE5MTM0Ni4wLjAuMA..&_ga=2.118074254.606116961.1684191339-1553869417.1684191339): (optionally) required to have a Synapse account if you are operating on a high performance compute cluster without root access.
 
