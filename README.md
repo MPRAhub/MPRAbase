@@ -6,16 +6,19 @@
 
 Before proceeding with the installation, please ensure that you have fulfilled making the following accounts:
 
--[] [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home): required to create & add their public ssh key.
--[] [Synapse](https://www.synapse.org/): required to complete certification and email <> to request addition to the project.
--[] [Docker](https://www.docker.com/): (optionally) required to have a Docker account, which will enable them to pull the MPRAbase Docker image from the Synapse registry.
--[] [Singularity](https://cloud.sylabs.io/?_gl=1*zlt1gk*_ga*MTU1Mzg2OTQxNy4xNjg0MTkxMzM5*_ga_X710KLJKK6*MTY4NDE5MTMzOS4xLjEuMTY4NDE5MTM0Ni4wLjAuMA..&_ga=2.118074254.606116961.1684191339-1553869417.1684191339): (optionally) required to have a Synapse account if they are operating on a high performance compute cluster without root access.
+-[GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home): required to create & add their public ssh key.
+
+-[Synapse](https://www.synapse.org/): required to complete certification and email <> to request addition to the project.
+
+-[Docker](https://www.docker.com/): (optionally) required to have a Docker account, which will enable them to pull the MPRAbase Docker image from the Synapse registry.
+
+-[Singularity](https://cloud.sylabs.io/?_gl=1*zlt1gk*_ga*MTU1Mzg2OTQxNy4xNjg0MTkxMzM5*_ga_X710KLJKK6*MTY4NDE5MTMzOS4xLjEuMTY4NDE5MTM0Ni4wLjAuMA..&_ga=2.118074254.606116961.1684191339-1553869417.1684191339): (optionally) required to have a Synapse account if they are operating on a high performance compute cluster without root access.
 
 For more information, please review our onboarding documentation for a smooth installation ([link here](https://docs.google.com/document/d/1d23PDeozSP36U-4aWNFhE1knIbZ2HUiWTan9AsKQ-KY/edit?usp=sharing)).
 
 # Installation
 
-Once you've completed the prerequiste accounts, please clone MPRAbase in a location that permits you to download. 
+Once you've completed the prerequiste accounts, please clone the MPRAorg-LibrarySuite repository:
 
 **TODO**: Add estimated file cache size
 
