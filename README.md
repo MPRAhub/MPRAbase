@@ -65,9 +65,5 @@ $ cd /home/jovyan/work
 $ Rscript build-iSEEindex-fork.R
 ```
 
-**TODO**: Vignette Tutorial
-
-
-```bash
-
-
+After a successful iSEEindex installation, open the Jupyter Notebook: MPRAhub/MPRAbase/notebooks/demo-MRAbase-v0.1.1.ipynb 
+Execute all of the cells and in your browser paste the link: http://0.0.0.0:3838/
