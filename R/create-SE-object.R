@@ -5,63 +5,70 @@ require(dplyr)
 require(SummarizedExperiment)
 require(tidyr)
 
-#' Creates a Summarized Experiment Object
-#'
+
+
 #' This function creates a Summarized Experiment Object containing Massively Parallel Reporter Assay (MPRA) data.
-#' @param geo_selection_df A dataframe containing the MPRA data for a user defined GEO identifier available in the legacy database.
+#'
+#' @param genome_build
+#' @param genomic_note
+#' @param metadata
+#' @param reference_fasta string path
+#' @param assigned_counts_replicate_list
 #' @export
-#' @examples
-#' summary_df <- read.table("../inst/summary.csv", header=T, sep=',') # Load summary file
-#' geo_selection_df <- filter(summary_df, GEO_number=="GSE83894") # User select GEO identifier
-#' se <- ExportSummarizedExperiment(geo_selection_df) # Create the Summarized Experimen
 
-create_summarized_experiment_object <- function(GEOID, summary){
-    ###  Check user input
-    ### user input a GEOID
-    # GEOID="GSE83894"  ### taking this GSE83894 as an example
+MPRAsnakeflow.ExportObject.SummarizedExperiment <-  function(genome_build, genomic_note, 
+                                                       metadata, reference_fasta, assigned_counts_replicate_list){
     
-    #connecting to SQL database in R
-    con <- DBI::dbConnect(RSQLite::SQLite(), dbname = "../data/mprabase_v4_6.db")
-    
-    ## read from db to dataframe
-    
-    ### read data from selected GEO_number
-    sqlStatement_seltable <- paste("SELECT * FROM datasets 
-    INNER JOIN designed_library ON datasets.datasets_id = designed_library.datasets_id 
-    INNER JOIN  sample ON designed_library.library_id=sample.library_id 
-    INNER JOIN  library_sequence ON sample.library_id=library_sequence.library_id 
-    INNER JOIN element_score ON library_sequence.library_element_id=element_score.library_element_id 
-    WHERE datasets.GEO_number=","'",GEOID,"'",sep="")
-    sel_table<- dbGetQuery(con, sqlStatement_seltable)
-    
-    #### generate coldata for grange from selected GEO_number
-    sqlStatement_coldata  <- paste("SELECT datasets.PMID, datasets.GEO_number,datasets.labs FROM datasets
-    WHERE datasets.GEO_number=","'",GEOID,"'",sep="")
-    colData=  dbGetQuery(con,sqlStatement_coldata )
-    
-    ####remove duplicated record
-    testing_colnames_1 <- sel_table[!duplicated(as.list(sel_table))]
-    testing_colnames_2 <-  testing_colnames_1[!duplicated(testing_colnames_1$element_sample_id),]
-    testing_colnames_2 <- subset(testing_colnames_2, select= -c(library_element_name.1, sample_id.1))
-    coord_all_table <- separate(data = testing_colnames_2, col = element_coordinate, into= c("seqnames","start","end"))
-    
-    ##### export Grange
-    gr = GRanges(seqnames = as.character(unlist(coord_all_table$seqnames)), 
-    ranges = IRanges(as.numeric(unlist(coord_all_table$start)),
-    end=as.numeric(unlist(coord_all_table$end)),
-    names = unlist(coord_all_table$element_sample_id)))
-    
-    #### making ColData by dropping genomic-region columns
+    sequences <- readDNAStringSet(reference_fasta)
 
-    #coord_all_table$start=as.numeric(coord_all_table$start)
-    #coord_all_table$end=as.numeric(coord_all_table$end)
+    sequence_ids <- names(reference_fasta)
+    sequence_data <- as.data.frame(reference_fasta)
     
-    mcols(gr) = subset(coord_all_table,select=-c(seqnames,start,end,sample_id,element_sample_id))
+    # Create a data table with sequence IDs and sequences
+    fasta_table <- data.table(id = sequence_ids, sequence = sequence_data)
     
-    #### making SummarizedExperiment
-    SE1=SummarizedExperiment(assays=list(ratio=(as.matrix(coord_all_table$score))),
-                             rowRanges=gr,
-                             colData=colData)
-    metadata(SE1)=summary
-    return(SE1)
+    coord_all_table = merge(cor,fasta_table,by.x = "V4", by.y = "id")
+    coord_all_table$genomic_note=genomic_note
+    coord_all_table$genome_build=genome_build
+    gr <- with(coord_all_table, GRanges(
+        seqnames = V1,
+        ranges = IRanges(start = V2 , end = V3),
+        strand = V6,
+        names = V4,
+        genome_build = genome_build,
+        sequence=sequence.x,
+        genomic_note=genomic_note
+    ))
+    
+    rep = metadata$DNA_RNA_reps
+    colData={}
+    for (j in 1:rep){
+            colData=rbind(colData,data.frame(REP=j,
+                                             data.frame(ENCODE_ID=metadata$ENCODE_ID,
+                                                        sample_status=c("NA"),
+                                                        replicate_status=c("NA"),
+                                                        cell_lines=metadata$Cell_line_tissue)
+                                             ))
+                          }
+
+    merged_table <- Reduce(function(...) merge(..., by = "name", all = TRUE), 
+                            assigned_counts_replicate_list)
+    
+    mcol_subset <- merged_table[merged_table$name %in% mcols(gr)$names, ]
+    ActivityScore <- cbind(mcol_subset$ratio.x,mcol_subset$ratio.y,mcol_subset$ratio)
+    colnames(ActivityScore) <- metadata$replicates
+    rownames(ActivityScore) <- mcol_subset$name
+    subset_gr <- gr[gr$names %in% rownames(ActivityScore)]
+
+    ## make SE
+    se <- SummarizedExperiment(assays=list(ActivityScore=ActivityScore),
+                                 rowRanges=subset_gr,
+                                 colData=colData)
+    number_of_elements <- as.numeric(nrow(ActivityScore))
+    metadata$number_of_elements <- number_of_elements
+    metadata(se) <- metadata
+
+    
 }
+
+
