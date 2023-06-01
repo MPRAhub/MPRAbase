@@ -53,7 +53,7 @@ After building the iSEE MPRAbase SIF file, navigate to the MPRAbase working dire
 
 ```bash
 cd MPRAbase/
-python3 run-hpc-MPRAbase.py  --container_port 9595 --local_dir_mount /local/dir/path
+python3 run-hpc-MPRAbase.py  --container_port 9595 --local_dir_mount /local/dir/path --sif env/MPRAbase.sif
 ```
 
 # Launch an iSEE MPRAbase Instance
