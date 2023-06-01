@@ -58,7 +58,8 @@ python3 run-hpc-MPRAbase.py  --container_port 9595 --local_dir_mount /local/dir/
 
 # Launch an iSEE MPRAbase Instance
 
-(**WorkAround**) In a running MPRAbase JupyterLab container, open a terminal and follow these commands:
+(**WorkAround**) 
+In a running MPRAbase JupyterLab container, open a terminal and follow these commands:
 
 ```bash
 $ cd /home/jovyan/work
@@ -72,3 +73,13 @@ MPRAhub/MPRAbase/notebooks/demo-MRAbase-v0.1.1.ipynb
 ```
 
 Finally, paste the link in your browser search bar: http://0.0.0.0:3838/
+
+# MPRAbase API Development
+
+(**WorkAround**) 
+In a running MPRAbase JupyterLab container, open a terminal and follow these commands:
+
+```bash
+$ cd /home/jovyan/
+$ Rscript build-MPRAbase-API.R
+```
