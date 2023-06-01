@@ -49,11 +49,11 @@ cd MPRAbase/env/
 bash build-singularity-sif.sh
 ```
 
-After building the iSEE MPRAbase SIF file, navigate to the MPRAbase working directory and launch an instance with **run-hpc-MPRAbase.sh**.
+After building the iSEE MPRAbase SIF file, navigate to the MPRAbase working directory and launch an instance with **run-hpc-MPRAbase.py**.
 
 ```bash
 cd MPRAbase/
-python3 run-hpc-MPRAbase.sh  --container-port 9595 --local-dir-mount /local/dir/path
+python3 run-hpc-MPRAbase.py  --container-port 9595 --local-dir-mount /local/dir/path
 ```
 
 # Launch an iSEE MPRAbase Instance
