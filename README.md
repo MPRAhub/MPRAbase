@@ -1,3 +1,3 @@
 # MPRAbase
 
-MPRAbase is a Bioconductor library for support managing MPRA datasets and analysis. Please refer to MPRAorg-LibrarySuite for installation.
+MPRAbase is a Bioconductor library to support managing MPRA datasets and analysis. Please refer to MPRAorg-LibrarySuite for installation.
