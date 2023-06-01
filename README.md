@@ -62,7 +62,7 @@ python3 run-hpc-MPRAbase.py  --container_port 9595 --local_dir_mount /local/dir/
 In a running MPRAbase JupyterLab container, open a terminal and follow these commands:
 
 ```bash
-$ cd /home/jovyan/work
+$ cd /home/jovyan/
 $ Rscript build-iSEEindex-fork.R
 ```
 
